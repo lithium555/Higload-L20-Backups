@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+
+  postgresql-0:
+    image: postgres:14.1
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    volumes:
+      - ./data/postgres-b:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
